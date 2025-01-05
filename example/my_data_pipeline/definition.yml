@@ -1,0 +1,12 @@
+pipeline:
+  name: "My data pipeline"
+  steps: 
+    - type: FilterNumInterval
+      params: 
+        column: "a"
+        max_value: 150.0
+        min_value: 0.0
+    - type: FilterByValue
+      params:
+        column: "label"
+        value: "fix"
